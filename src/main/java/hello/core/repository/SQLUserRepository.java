@@ -1,7 +1,7 @@
 package hello.core.repository;
 
 import hello.core.mapper.TestMapper;
-import hello.model.User;
+import hello.core.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

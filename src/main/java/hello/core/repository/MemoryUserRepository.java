@@ -1,6 +1,6 @@
 package hello.core.repository;
 
-import hello.model.User;
+import hello.core.model.User;
 
 import java.util.HashMap;
 import java.util.Map;

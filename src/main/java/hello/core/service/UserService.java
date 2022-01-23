@@ -1,7 +1,7 @@
 package hello.core.service;
 
 
-import hello.model.User;
+import hello.core.model.User;
 
 import javax.transaction.TransactionRolledbackException;
 

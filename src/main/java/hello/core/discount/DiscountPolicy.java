@@ -1,6 +1,6 @@
 package hello.core.discount;
 
-import hello.model.User;
+import hello.core.model.User;
 
 public interface DiscountPolicy {
 

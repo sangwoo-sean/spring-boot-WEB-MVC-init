@@ -1,6 +1,6 @@
 package hello.core.service;
 
-import hello.model.User;
+import hello.core.model.User;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class UserServiceTest {
 
     @Test
     @DisplayName("MySql연동 테스트")
-    void DBConnection() {
+    void DBConnection() { // User db table has to have Columns : id, name
         //given
         User joinUser = new User("tester");
         try {

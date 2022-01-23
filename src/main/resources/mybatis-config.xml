@@ -9,6 +9,6 @@
         <setting name="jdbcTypeForNull" value="NULL"/>
     </settings>
     <typeAliases>
-        <typeAlias alias="User" type="hello.model.User"/>
+        <typeAlias alias="User" type="hello.core.model.User"/>
     </typeAliases>
 </configuration>

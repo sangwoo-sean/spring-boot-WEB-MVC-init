@@ -1,4 +1,4 @@
-package hello.model;
+package hello.core.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

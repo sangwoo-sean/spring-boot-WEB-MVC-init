@@ -1,6 +1,6 @@
 package hello.core.mapper;
 
-import hello.model.User;
+import hello.core.model.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;

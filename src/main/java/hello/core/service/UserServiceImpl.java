@@ -1,7 +1,7 @@
 package hello.core.service;
 
 import hello.core.repository.UserRepository;
-import hello.model.User;
+import hello.core.model.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
