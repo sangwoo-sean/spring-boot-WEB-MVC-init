@@ -25,7 +25,7 @@ public class UserController {
         return "test";
     }
 
-    @GetMapping("test.do")
+    @GetMapping("/test.do")
     public ModelAndView test(Long no) {
         ModelAndView view = new ModelAndView("test");
         User user = userService.findUserById(no);
@@ -33,7 +33,7 @@ public class UserController {
         return view;
     }
 
-    @PostMapping("test.do")
+    @PostMapping("/test.do")
     public ModelAndView testPost(User user) throws TransactionRolledbackException {
         ModelAndView view = new ModelAndView("test");
         userService.join(user);

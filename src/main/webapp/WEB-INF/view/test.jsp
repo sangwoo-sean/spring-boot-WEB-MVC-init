@@ -15,6 +15,11 @@
         <form action="/test.do" method="post">
             <input type="text" placeholder="name" name="name">
         </form>
+        <form action="/fileupload.do" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <button>제출</button>
+        </form>
+        <img src="${url}" alt="이미지가 없습니다.">
     </div>
 </body>
 </html>
