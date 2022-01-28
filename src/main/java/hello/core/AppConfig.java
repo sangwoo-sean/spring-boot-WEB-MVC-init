@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.JstlView;
 
 import javax.servlet.Filter;
 import javax.sql.DataSource;
@@ -35,11 +36,12 @@ public class AppConfig implements WebMvcConfigurer {
         registry.jsp("/WEB-INF/views/", ".jsp");
     }*/
     @Bean
-    public ViewResolver customViewResolver() {
-        InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
-        internalResourceViewResolver.setPrefix("/WEB-INF/views/");
-        internalResourceViewResolver.setSuffix(".jsp");
-        return internalResourceViewResolver;
+    public InternalResourceViewResolver jspViewResolver(){
+        final InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+        viewResolver.setViewClass(JstlView.class);
+        viewResolver.setPrefix("/WEB-INF/views/");
+        viewResolver.setSuffix(".jsp");
+        return viewResolver;
     }
 
     // jdbc config
