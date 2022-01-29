@@ -22,7 +22,6 @@ import javax.servlet.Filter;
 import javax.sql.DataSource;
 
 @Configuration
-@EnableWebMvc // for mvc
 @MapperScan(value = "hello.core.mapper", sqlSessionFactoryRef = "sqlSessionFactory") // for mybatis mapper
 @EnableTransactionManagement // for transaction manager
 public class AppConfig implements WebMvcConfigurer {
@@ -73,13 +72,5 @@ public class AppConfig implements WebMvcConfigurer {
         filterRegistrationBean.setOrder(1);
         filterRegistrationBean.addUrlPatterns("/*");
         return filterRegistrationBean;
-    }
-
-    @Override // 정적 리소스 mapping
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry
-                .addResourceHandler("/static/**") // url
-                .addResourceLocations("classpath:/static/"); // 찾을 경로
-//                .addResourceLocations("file:/home/ubuntu/spring-boot-WEB-MVC-init/build/resources/main/static/"); // 찾을 경로 : 배포
     }
 }
