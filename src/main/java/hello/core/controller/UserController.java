@@ -21,8 +21,8 @@ public class UserController {
     }
 
     @GetMapping("/")
-    public String index() {
-        return "test";
+    public ModelAndView index() {
+        return new ModelAndView("test");
     }
 
     @GetMapping("/test.do")

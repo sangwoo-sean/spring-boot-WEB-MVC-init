@@ -16,10 +16,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.*;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import org.springframework.web.servlet.view.JstlView;
 
 import javax.servlet.Filter;
 import javax.sql.DataSource;
@@ -29,20 +26,6 @@ import javax.sql.DataSource;
 @MapperScan(value = "hello.core.mapper", sqlSessionFactoryRef = "sqlSessionFactory") // for mybatis mapper
 @EnableTransactionManagement // for transaction manager
 public class AppConfig implements WebMvcConfigurer {
-
-    // view resolver config
-    /*@Override
-    public void configureViewResolvers(ViewResolverRegistry registry) {
-        registry.jsp("/WEB-INF/views/", ".jsp");
-    }*/
-    @Bean
-    public InternalResourceViewResolver jspViewResolver(){
-        final InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setViewClass(JstlView.class);
-        viewResolver.setPrefix("/WEB-INF/views/");
-        viewResolver.setSuffix(".jsp");
-        return viewResolver;
-    }
 
     // jdbc config
     @Bean
