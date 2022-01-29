@@ -80,5 +80,6 @@ public class AppConfig implements WebMvcConfigurer {
         registry
                 .addResourceHandler("/static/**") // url
                 .addResourceLocations("classpath:/static/"); // 찾을 경로
+//                .addResourceLocations("file:/home/ubuntu/spring-boot-WEB-MVC-init/build/resources/main/static/"); // 찾을 경로 : 배포
     }
 }
