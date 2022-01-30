@@ -11,7 +11,6 @@ public class BaseInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println("before enter to Controller");
-        System.out.println(request.getRequestURI());
         return true;
     }
 
